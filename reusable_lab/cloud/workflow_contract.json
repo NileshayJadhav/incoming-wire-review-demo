@@ -1,0 +1,14 @@
+{
+  "status": "manual_build_contract_not_a_deployed_workflow",
+  "version": "1.0",
+  "source_actions": "read_only",
+  "output_actions": "new_DRAFT_workbook_and_report_only",
+  "tools": [
+    {"name": "IWT_InventoryBatch", "inputs": ["BatchId"], "fixed_configuration": ["SiteAddress", "LibraryName", "AllowedBatchRoot"], "outputs": ["Status", "InventoryJson"], "complete_gate": "every result page enumerated, bounded files, unique paths and sample mappings"},
+    {"name": "IWT_StartReview", "inputs": ["BatchId", "WorkbookIdentifier", "SampleIds", "RuleVersion"], "outputs": ["JobId", "Status"], "behavior": "validate allowlist and inventory; durable idempotent background dispatch; return promptly"},
+    {"name": "IWT_JobStatus", "inputs": ["JobId"], "outputs": ["Status", "CompletedSamples", "TotalSamples", "OpenChecks", "DraftWorkbookUrl", "EvidenceReportUrl"], "behavior": "authorize current user for this job; read job state; no extraction call"},
+    {"name": "IWT_CancelReview", "inputs": ["JobId"], "outputs": ["Status"], "behavior": "authorize current user; cooperative cancellation; no new sample or writer after cancellation"}
+  ],
+  "deployment_dependencies": ["company environment and connections", "approved extraction route", "deterministic evidence validator and criteria", "durable job storage", "draft-copy-only writer", "tenant end-to-end tests"],
+  "not_included": ["Power Platform solution export", "tenant authentication", "hosted API", "automatic permission grant", "publishing"]
+}

@@ -1,0 +1,19 @@
+{
+  "sheetName": "Incoming Wires",
+  "headerRow": 6,
+  "samples": [
+    {
+      "row": 7,
+      "sampleId": "1",
+      "customer": "FICTIONAL DEMO MEMBER",
+      "account": "00000001",
+      "fee": 15,
+      "feeCharged": "X",
+      "classification": "Domestic",
+      "travel": "X",
+      "ofac": "X",
+      "posting": "OPEN",
+      "comments": "DRAFT. Fictional example only. Posting requires readable statement evidence. Use a reviewed payload matching the actual copied workbook."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+reusable_lab/work/
+reusable_lab/outputs/
+reusable_lab/evaluation/results/
+evaluation-results.json
+*.db
+*.sqlite*
+*.log
+node_modules/
+.langflow/
+private/

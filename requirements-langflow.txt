@@ -1,0 +1,2 @@
+-r requirements.txt
+langflow==1.2.0

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "rule_set_id": "fictional_qa_batch_b_sep_2026_v1",
+  "status": "reviewer_confirmed",
+  "provenance": {
+    "source_type": "reviewer_supplied",
+    "recorded_on": "2026-10-11",
+    "description": "FICTIONAL QA ONLY. Criteria copied from the user-confirmed August-December 2025 reviewer criteria, with an invented September 2026 effective period solely to validate fictional batch B dated 2026-09-15. This is not the user's approval of 2026 company criteria, approved company policy, or a regulatory rule set. Do not use for real 2026 records.",
+    "approved_policy_document": false,
+    "test_only": true,
+    "confirmation_scope": "Fictional batch B expected test behavior only. The reviewer_confirmed status and reviewer_supplied source_type are retained for schema compatibility; they do not assert real-period company approval.",
+    "derived_from_rule_set_id": "reviewer_incoming_aug_dec_2025_v1"
+  },
+  "effective_from": "2026-09-01",
+  "effective_to": "2026-09-30",
+  "currency": "USD",
+  "fee": {
+    "domestic_amount": "15.00",
+    "foreign_amount": null,
+    "separate_statement_debit_required": true,
+    "accept_incoming_myadvantage_designation": true,
+    "myadvantage_expected_fee": "0.00",
+    "waived_fee_charged_result": "NOT_APPLICABLE"
+  },
+  "travel": {
+    "threshold": "3000.00",
+    "operator": ">=",
+    "required_fields": ["originator_name", "originator_account", "originator_address", "beneficiary_name", "beneficiary_account", "beneficiary_address", "sending_fi", "receiving_fi"]
+  },
+  "ofac": {
+    "required_for_all": true,
+    "passed_statuses": ["Passed", "OFAC Passed"],
+    "false_positive_statuses": ["False Positive"],
+    "false_positive_requires_approval_and_reason": true
+  },
+  "posting": {
+    "amount_tolerance": "0.00",
+    "account_suffix_length": 4,
+    "allow_minor_name_variations": true,
+    "account_corrections_require_manual_review": true,
+    "date_variances_require_manual_review": true,
+    "returns_require_manual_review": true
+  },
+  "symbols": {"supported": "X", "not_applicable": "-", "manual_review": "OPEN"}
+}

@@ -1,0 +1,6 @@
+openpyxl==3.1.5
+pypdf==5.1.0
+Pillow==11.3.0
+pypdfium2==5.13.0
+langchain-openai==0.2.12
+pytest==8.4.2

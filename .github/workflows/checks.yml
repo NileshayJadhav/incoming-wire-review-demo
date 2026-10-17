@@ -1,0 +1,16 @@
+name: Offline fictional checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m reusable_lab.demo
+      - run: python -m reusable_lab.evaluation --offline --output evaluation-results.json
+      - run: python -m pytest tests -q

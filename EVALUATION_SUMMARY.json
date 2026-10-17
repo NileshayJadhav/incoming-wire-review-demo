@@ -1,0 +1,172 @@
+{
+  "status": "PASS",
+  "mode": "CACHED_MODEL_REGRESSION_AFTER_OBSERVED_FAILURES",
+  "samples": {
+    "reported": 8,
+    "expected": 8,
+    "graded": 8,
+    "missing": [],
+    "unexpected": []
+  },
+  "check_accuracy": 1.0,
+  "model_calls": 0,
+  "fields": {
+    "matched": 266,
+    "graded": 266,
+    "exact_accuracy": 1.0
+  },
+  "controls": {
+    "fee_charged": {
+      "actual_SUPPORTED": 4,
+      "graded": 8,
+      "correct": 8,
+      "expected_not_supported": 4,
+      "expected_supported": 4,
+      "graded_actual_supported": 4,
+      "actual_OPEN": 4,
+      "accuracy": 1.0,
+      "false_supported": 0,
+      "false_supported_rate_among_expected_not_supported": 0.0,
+      "supported_precision": 1.0,
+      "supported_recall": 1.0,
+      "confusion_expected_rows_actual_columns": {
+        "SUPPORTED": {
+          "SUPPORTED": 4,
+          "NOT_APPLICABLE": 0,
+          "OPEN": 0,
+          "MISSING_OR_INVALID": 0
+        },
+        "NOT_APPLICABLE": {
+          "SUPPORTED": 0,
+          "NOT_APPLICABLE": 0,
+          "OPEN": 0,
+          "MISSING_OR_INVALID": 0
+        },
+        "OPEN": {
+          "SUPPORTED": 0,
+          "NOT_APPLICABLE": 0,
+          "OPEN": 4,
+          "MISSING_OR_INVALID": 0
+        }
+      }
+    },
+    "travel": {
+      "actual_SUPPORTED": 6,
+      "graded": 8,
+      "correct": 8,
+      "expected_not_supported": 2,
+      "expected_supported": 6,
+      "graded_actual_supported": 6,
+      "actual_OPEN": 2,
+      "accuracy": 1.0,
+      "false_supported": 0,
+      "false_supported_rate_among_expected_not_supported": 0.0,
+      "supported_precision": 1.0,
+      "supported_recall": 1.0,
+      "confusion_expected_rows_actual_columns": {
+        "SUPPORTED": {
+          "SUPPORTED": 6,
+          "NOT_APPLICABLE": 0,
+          "OPEN": 0,
+          "MISSING_OR_INVALID": 0
+        },
+        "NOT_APPLICABLE": {
+          "SUPPORTED": 0,
+          "NOT_APPLICABLE": 0,
+          "OPEN": 0,
+          "MISSING_OR_INVALID": 0
+        },
+        "OPEN": {
+          "SUPPORTED": 0,
+          "NOT_APPLICABLE": 0,
+          "OPEN": 2,
+          "MISSING_OR_INVALID": 0
+        }
+      }
+    },
+    "ofac": {
+      "actual_SUPPORTED": 4,
+      "graded": 8,
+      "correct": 8,
+      "expected_not_supported": 4,
+      "expected_supported": 4,
+      "graded_actual_supported": 4,
+      "actual_OPEN": 4,
+      "accuracy": 1.0,
+      "false_supported": 0,
+      "false_supported_rate_among_expected_not_supported": 0.0,
+      "supported_precision": 1.0,
+      "supported_recall": 1.0,
+      "confusion_expected_rows_actual_columns": {
+        "SUPPORTED": {
+          "SUPPORTED": 4,
+          "NOT_APPLICABLE": 0,
+          "OPEN": 0,
+          "MISSING_OR_INVALID": 0
+        },
+        "NOT_APPLICABLE": {
+          "SUPPORTED": 0,
+          "NOT_APPLICABLE": 0,
+          "OPEN": 0,
+          "MISSING_OR_INVALID": 0
+        },
+        "OPEN": {
+          "SUPPORTED": 0,
+          "NOT_APPLICABLE": 0,
+          "OPEN": 4,
+          "MISSING_OR_INVALID": 0
+        }
+      }
+    },
+    "posting": {
+      "actual_SUPPORTED": 6,
+      "graded": 8,
+      "correct": 8,
+      "expected_not_supported": 2,
+      "expected_supported": 6,
+      "graded_actual_supported": 6,
+      "actual_OPEN": 2,
+      "accuracy": 1.0,
+      "false_supported": 0,
+      "false_supported_rate_among_expected_not_supported": 0.0,
+      "supported_precision": 1.0,
+      "supported_recall": 1.0,
+      "confusion_expected_rows_actual_columns": {
+        "SUPPORTED": {
+          "SUPPORTED": 6,
+          "NOT_APPLICABLE": 0,
+          "OPEN": 0,
+          "MISSING_OR_INVALID": 0
+        },
+        "NOT_APPLICABLE": {
+          "SUPPORTED": 0,
+          "NOT_APPLICABLE": 0,
+          "OPEN": 0,
+          "MISSING_OR_INVALID": 0
+        },
+        "OPEN": {
+          "SUPPORTED": 0,
+          "NOT_APPLICABLE": 0,
+          "OPEN": 2,
+          "MISSING_OR_INVALID": 0
+        }
+      }
+    }
+  },
+  "critical_failures": 0,
+  "limitations": [
+    "Synthetic developer labels require independent human validation before an accuracy claim.",
+    "Offline mocked extraction verifies scoring, source validation and criteria regression, not model behavior or prompt-injection resistance.",
+    "A real-sample report without human-validated expected labels is operationally audited but never scored for accuracy.",
+    "No automatic audit sign-off, compliance approval or production-release decision is made.",
+    "These originally held_out cases informed fixes after initial observed model failures; this is regression after observed failures, not a fresh untouched holdout."
+  ],
+  "initial_live_result": {
+    "status": "FAIL",
+    "mode": "LIVE_MODEL_TEXT_EXTRACTION",
+    "check_accuracy": 0.5625,
+    "model_calls": 14,
+    "critical_failures": 6
+  },
+  "methodology_note": "Originally held-out cases were inspected to repair defects. The later cache replay is a regression check, not an untouched holdout or new model run."
+}
